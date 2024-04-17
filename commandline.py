@@ -75,13 +75,14 @@ def _add_arguments_for_module(parser,
     # Determine constructor argument names and defaults
     # -------------------------------------------------------------------------
     try:
-        argspec = inspect.getargspec(class_constructor.__init__)
-        argspec_defaults = argspec.defaults if argspec.defaults is not None else []
-        full_args = argspec.args
-        default_args_dict = dict(zip(argspec.args[-len(argspec_defaults):], argspec_defaults))
+        sig = inspect.signature(class_constructor.__init__)
+        params = sig.parameters
+        defaults = [p.default for p in params.values() if p.default is not inspect.Parameter.empty]
+        full_args = list(params.keys())
+        default_args_dict = {name: p.default for name, p in params.items() if p.default is not inspect.Parameter.empty}
     except TypeError:
-        print(argspec)
-        print(argspec.defaults)
+        print(default_args_dict)
+        print(defaults)
         raise ValueError("unknown_default_types should be adjusted for module: '%s.py'" % name)
 
     # -------------------------------------------------------------------------

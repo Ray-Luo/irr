@@ -1,0 +1,111 @@
+[2024-04-16 23:48:24] ==> Commandline Arguments
+[2024-04-16 23:48:24]   batch_size: 8
+[2024-04-16 23:48:24]   batch_size_val: 8
+[2024-04-16 23:48:24]   checkpoint: None
+[2024-04-16 23:48:24]   cuda: True
+[2024-04-16 23:48:24]   evaluation: False
+[2024-04-16 23:48:24]   lr_scheduler: MultiStepLR
+[2024-04-16 23:48:24]   lr_scheduler_gamma: 0.5
+[2024-04-16 23:48:24]   lr_scheduler_last_epoch: -1
+[2024-04-16 23:48:24]   lr_scheduler_milestones: [108, 144, 180]
+[2024-04-16 23:48:24]   lr_scheduler_verbose: deprecated
+[2024-04-16 23:48:24]   model: PWCNet
+[2024-04-16 23:48:24]   model_div_flow: 0.05
+[2024-04-16 23:48:24]   name: run
+[2024-04-16 23:48:24]   num_iters: 1
+[2024-04-16 23:48:24]   num_workers: 4
+[2024-04-16 23:48:24]   optimizer: Adam
+[2024-04-16 23:48:24]   optimizer_amsgrad: False
+[2024-04-16 23:48:24]   optimizer_betas: (0.9, 0.999)
+[2024-04-16 23:48:24]   optimizer_capturable: False
+[2024-04-16 23:48:24]   optimizer_differentiable: False
+[2024-04-16 23:48:24]   optimizer_eps: 1e-08
+[2024-04-16 23:48:24]   optimizer_foreach: None
+[2024-04-16 23:48:24]   optimizer_fused: None
+[2024-04-16 23:48:24]   optimizer_group: None
+[2024-04-16 23:48:24]   optimizer_lr: 0.0001
+[2024-04-16 23:48:24]   optimizer_maximize: False
+[2024-04-16 23:48:24]   optimizer_weight_decay: 0.0004
+[2024-04-16 23:48:24]   save: experiments/PWCNet-20240416-234820
+[2024-04-16 23:48:24]   save_result_bidirection: False
+[2024-04-16 23:48:24]   save_result_flo: False
+[2024-04-16 23:48:24]   save_result_img: False
+[2024-04-16 23:48:24]   save_result_occ: False
+[2024-04-16 23:48:24]   save_result_path_name: 
+[2024-04-16 23:48:24]   save_result_png: False
+[2024-04-16 23:48:24]   seed: 1
+[2024-04-16 23:48:24]   start_epoch: 1
+[2024-04-16 23:48:24]   total_epochs: 216
+[2024-04-16 23:48:24]   training_augmentation: RandomAffineFlow
+[2024-04-16 23:48:24]   training_augmentation_addnoise: True
+[2024-04-16 23:48:24]   training_dataset: FlyingChairsTrain
+[2024-04-16 23:48:24]   training_dataset_photometric_augmentations: True
+[2024-04-16 23:48:24]   training_dataset_root: /home/luoleyouluole/res/public_data/FlyingChairs_release/data
+[2024-04-16 23:48:24]   training_key: total_loss
+[2024-04-16 23:48:24]   training_loss: MultiScaleEPE_PWC
+[2024-04-16 23:48:24]   validation_augmentation: None
+[2024-04-16 23:48:24]   validation_dataset: FlyingChairsValid
+[2024-04-16 23:48:24]   validation_dataset_photometric_augmentations: False
+[2024-04-16 23:48:24]   validation_dataset_root: /home/luoleyouluole/res/public_data/FlyingChairs_release/data
+[2024-04-16 23:48:24]   validation_key: epe
+[2024-04-16 23:48:24]   validation_key_minimize: True
+[2024-04-16 23:48:24]   validation_loss: MultiScaleEPE_PWC
+[2024-04-16 23:48:24] ==> Random Seeds
+[2024-04-16 23:48:24]   Python seed: 1
+[2024-04-16 23:48:24]   Numpy seed: 2
+[2024-04-16 23:48:24]   Torch CPU seed: 3
+[2024-04-16 23:48:24]   Torch CUDA seed: 4
+[2024-04-16 23:48:24] ==> Datasets
+[2024-04-16 23:48:24]   Training Dataset: FlyingChairsTrain
+[2024-04-16 23:48:24]     input1: [3, 384, 512]
+[2024-04-16 23:48:24]     input2: [3, 384, 512]
+[2024-04-16 23:48:24]     target1: [2, 384, 512]
+[2024-04-16 23:48:24]     target_occ1: [1, 384, 512]
+[2024-04-16 23:48:24]     num_examples: 22232
+[2024-04-16 23:48:24]   Validation Dataset: FlyingChairsValid
+[2024-04-16 23:48:24]     input1: [3, 384, 512]
+[2024-04-16 23:48:24]     input2: [3, 384, 512]
+[2024-04-16 23:48:24]     target1: [2, 384, 512]
+[2024-04-16 23:48:24]     target_occ1: [1, 384, 512]
+[2024-04-16 23:48:24]     num_examples: 640
+[2024-04-16 23:48:24] ==> Runtime Augmentations
+[2024-04-16 23:48:24]   training_augmentation: RandomAffineFlow
+[2024-04-16 23:48:24]     addnoise: True
+[2024-04-16 23:48:27]   validation_augmentation: None
+[2024-04-16 23:48:27] ==> Model and Loss
+[2024-04-16 23:48:27]   Initializing MSRA
+[2024-04-16 23:48:27]   Batch Size: 8
+[2024-04-16 23:48:27]   GPGPU: Cuda
+[2024-04-16 23:48:27]   Network: PWCNet
+[2024-04-16 23:48:27]   Number of parameters: 8639230
+[2024-04-16 23:48:27]   Training Key: total_loss
+[2024-04-16 23:48:27]   Training Loss: MultiScaleEPE_PWC
+[2024-04-16 23:48:27]   Validation Key: epe
+[2024-04-16 23:48:27]   Validation Loss: MultiScaleEPE_PWC
+[2024-04-16 23:48:27] ==> Checkpoint
+[2024-04-16 23:48:27]   No checkpoint given.
+[2024-04-16 23:48:27]   Starting from scratch with random initialization.
+[2024-04-16 23:48:27] ==> Save Directory
+[2024-04-16 23:48:27]   Save directory: experiments/PWCNet-20240416-234820
+[2024-04-16 23:48:27] ==> Optimizer
+[2024-04-16 23:48:27]   Adam
+[2024-04-16 23:48:27]   amsgrad: False
+[2024-04-16 23:48:27]   betas: (0.9, 0.999)
+[2024-04-16 23:48:27]   capturable: False
+[2024-04-16 23:48:27]   differentiable: False
+[2024-04-16 23:48:27]   eps: 1e-08
+[2024-04-16 23:48:27]   foreach: None
+[2024-04-16 23:48:27]   fused: None
+[2024-04-16 23:48:27]   lr: 0.0001
+[2024-04-16 23:48:27]   maximize: False
+[2024-04-16 23:48:27]   weight_decay: 0.0004
+[2024-04-16 23:48:27] ==> Learning Rate Scheduler
+[2024-04-16 23:48:27]   class: MultiStepLR
+[2024-04-16 23:48:27]   gamma: 0.5
+[2024-04-16 23:48:27]   last_epoch: -1
+[2024-04-16 23:48:27]   milestones: [108, 144, 180]
+[2024-04-16 23:48:27]   verbose: deprecated
+[2024-04-16 23:48:27] ==> Runtime
+[2024-04-16 23:48:27]   start_epoch: 1
+[2024-04-16 23:48:27]   total_epochs: 216
+[2024-04-16 23:48:27] 

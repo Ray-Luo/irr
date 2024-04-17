@@ -82,9 +82,20 @@ def kwargs_from_args(args, name, exclude=[]):
 # Filters out keys that not in the constructor
 # -------------------------------------------------------------------------------------------------
 def instance_from_kwargs(class_constructor, kwargs):
-    argspec = inspect.getargspec(class_constructor.__init__)
-    full_args = argspec.args
-    filtered_args = dict([(k,v) for k,v in kwargs.items() if k in full_args])
+    # argspec = inspect.getargspec(class_constructor.__init__)
+    # full_args = argspec.args
+    # filtered_args = dict([(k,v) for k,v in kwargs.items() if k in full_args])
+    # instance = class_constructor(**filtered_args)
+    sig = inspect.signature(class_constructor.__init__)
+    params = sig.parameters
+
+    # Get list of parameter names
+    full_args = list(params.keys())
+
+    # Filter kwargs based on the function's parameters
+    filtered_args = {k: v for k, v in kwargs.items() if k in full_args}
+
+    # Create an instance of the class
     instance = class_constructor(**filtered_args)
     return instance
 
