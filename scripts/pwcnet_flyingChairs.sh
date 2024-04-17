@@ -10,7 +10,7 @@ FLYINGCHAIRS_HOME=/home/luoleyouluole/res/public_data/FlyingChairs_release/data
 MODEL=PWCNet
 EVAL_LOSS=MultiScaleEPE_PWC
 CHECKPOINT=None
-SIZE_OF_BATCH=8
+SIZE_OF_BATCH=80
 
 # save path
 TIME=$(date +"%Y%m%d-%H%M%S")
